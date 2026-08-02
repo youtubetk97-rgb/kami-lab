@@ -127,7 +127,7 @@ export default function HomePage() {
         <section className="mx-auto w-full max-w-6xl px-4 py-12">
           <SectionHeading
             eyebrow="RANKING"
-            title="編集部の比較ランキング TOP3"
+            title="編集部のお勧め"
             description="コスパ・使いやすさ・成分の充実度・続けやすさの4項目で評価しました。順位は編集部の基準によるもので、効果を保証するものではありません。"
           />
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
