@@ -7,8 +7,6 @@ import {
   HeartPulse,
   Leaf,
   Mars,
-  ScrollText,
-  ShieldCheck,
   Sparkles,
   Stethoscope,
   Venus,
@@ -24,27 +22,6 @@ import { ArticleCard } from '@/components/article-card'
 import { ProductMiniCard } from '@/components/product-mini-card'
 import { SectionHeading } from '@/components/section-heading'
 import { PRODUCTS_PUBLISHED, articles, categories, faqs, publishedProducts } from '@/lib/data'
-
-const trustPoints = [
-  {
-    icon: ScrollText,
-    title: '公開情報にもとづく整理',
-    text: '販売元の公式情報や成分表示を確認し、比較しやすい形でまとめています。',
-    color: 'bg-sky-500',
-  },
-  {
-    icon: ShieldCheck,
-    title: '弱点も隠さず記載',
-    text: '良い点だけでなく、気になる点や向かない人も併せて掲載しています。',
-    color: 'bg-violet-500',
-  },
-  {
-    icon: Stethoscope,
-    title: '医療は医療へ',
-    text: '受診が必要な状態の目安も示し、セルフケアの範囲を明確にしています。',
-    color: 'bg-orange-500',
-  },
-]
 
 const categoryIcons = {
   aga: Stethoscope,
@@ -129,25 +106,6 @@ export default function HomePage() {
             />
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-4 py-12">
-        <ul className="grid gap-4 sm:grid-cols-3">
-          {trustPoints.map((point) => (
-            <li
-              key={point.title}
-              className="flex flex-col gap-2 rounded-xl bg-card p-4 shadow-sm ring-1 ring-foreground/10 transition-shadow hover:shadow-md"
-            >
-              <span
-                className={`flex size-9 items-center justify-center rounded-lg text-white ${point.color}`}
-              >
-                <point.icon className="size-4" aria-hidden="true" />
-              </span>
-              <h2 className="font-heading text-sm font-bold">{point.title}</h2>
-              <p className="text-sm leading-relaxed text-muted-foreground">{point.text}</p>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-12">
