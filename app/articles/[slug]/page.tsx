@@ -6,6 +6,7 @@ import { Clock, Info, RefreshCw } from 'lucide-react'
 import { ArticleCard } from '@/components/article-card'
 import { HairPatternDiagram } from '@/components/hair-pattern-diagram'
 import { ProductInlineCard } from '@/components/product-inline-card'
+import { ScalpMassageDiagram } from '@/components/scalp-massage-diagram'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -193,6 +194,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             }
             case 'hairPatternDiagram':
               return <HairPatternDiagram key={index} />
+            case 'scalpMassageDiagram':
+              return <ScalpMassageDiagram key={index} />
             default:
               return null
           }
