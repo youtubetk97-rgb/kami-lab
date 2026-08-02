@@ -20,7 +20,7 @@ const zenKaku = Zen_Kaku_Gothic_New({
 
 export const metadata: Metadata = {
   title: {
-    default: 'ハツラボ | 薄毛・育毛対策の比較メディア',
+    default: 'ハツラボ | 薄毛・抜け毛対策の総合メディア',
     template: '%s | ハツラボ',
   },
   description:

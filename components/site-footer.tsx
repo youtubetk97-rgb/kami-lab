@@ -15,7 +15,7 @@ export function SiteFooter() {
               <span className="font-heading text-base font-bold">ハツラボ</span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              薄毛・抜け毛の悩みに向き合う人のための比較メディアです。公開されている情報をもとに、判断の材料になる形で整理してお届けしています。
+              薄毛・抜け毛の悩みに向き合う人のための総合メディアです。公開されている情報をもとに、判断の材料になる形で整理してお届けしています。
             </p>
           </div>
 
