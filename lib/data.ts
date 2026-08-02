@@ -629,8 +629,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,
-    image: '/images/article-aga.png',
-    imageAlt: '家族のシルエットと頭髪をイメージした写真',
+    image: '/images/hero-clinic.png',
+    imageAlt: '医師とAGAについて相談する男性',
     tags: ['AGA', '遺伝', '基礎知識'],
     body: [
       {
@@ -678,7 +678,7 @@ export const articles: Article[] = [
     updatedAt: '2026-08-02',
     readingTime: 6,
     image: '/images/product-serum.png',
-    imageAlt: 'シャンプーボトルとタオルが置かれた洗面台',
+    imageAlt: '化粧品ボトルのイメージ写真',
     tags: ['ノンシリコン', 'シャンプー', '選び方'],
     body: [
       {
@@ -734,8 +734,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
-    image: '/images/article-nutrition.png',
-    imageAlt: '鏡の前で自分の髪を確認している女性の後ろ姿',
+    image: '/images/article-aga.png',
+    imageAlt: '医師が女性患者の頭皮をダーモスコープで診察している様子',
     tags: ['女性の薄毛', 'FAGA', '基礎知識'],
     body: [
       {
@@ -792,7 +792,7 @@ export const articles: Article[] = [
     updatedAt: '2026-08-02',
     readingTime: 6,
     image: '/images/article-sleep.png',
-    imageAlt: '赤ちゃんと過ごす母親の後ろ姿',
+    imageAlt: 'ベッドで横になり休んでいる女性',
     tags: ['産後脱毛', '女性の薄毛', 'ホルモンバランス'],
     body: [
       {
@@ -887,7 +887,7 @@ export const articles: Article[] = [
     updatedAt: '2026-08-02',
     readingTime: 7,
     image: '/images/hero-clinic.png',
-    imageAlt: 'カレンダーと診察の様子をイメージした写真',
+    imageAlt: '医師と治療方針について相談している様子',
     tags: ['AGA', '治療効果', '公表データ'],
     body: [
       {
@@ -933,8 +933,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 5,
-    image: '/images/article-aga.png',
-    imageAlt: 'スマートフォンでレビューサイトを見ている様子',
+    image: '/images/hero-clinic.png',
+    imageAlt: '医師との相談の様子をイメージした写真',
     tags: ['口コミ', '体験談', 'AGA'],
     body: [
       {
@@ -981,7 +981,7 @@ export const articles: Article[] = [
     updatedAt: '2026-08-02',
     readingTime: 7,
     image: '/images/article-sleep.png',
-    imageAlt: '鏡の前で髪を整える中高年女性の後ろ姿',
+    imageAlt: '自宅でくつろぐ女性の写真',
     tags: ['びまん性脱毛症', '更年期', '女性の薄毛'],
     body: [
       {
@@ -1077,8 +1077,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
-    image: '/images/article-aga.png',
-    imageAlt: '鏡で生え際を確認している男性の後ろ姿',
+    image: '/images/hero-clinic.png',
+    imageAlt: '医師と向き合ってAGAについて相談する男性',
     tags: ['薄毛パターン', 'AGA', 'セルフチェック'],
     body: [
       {
@@ -1132,8 +1132,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,
-    image: '/images/hero-clinic.png',
-    imageAlt: 'スマートフォンでSNSを確認している男性の手元',
+    image: '/images/article-shampoo.png',
+    imageAlt: '身支度をする男性の写真',
     tags: ['口コミ', '体験談', 'AGA', 'SNS'],
     body: [
       {
