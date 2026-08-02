@@ -81,8 +81,8 @@ export default function HomePage() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 lg:flex-row lg:items-center lg:gap-12 lg:py-24">
           <div className="flex flex-1 flex-col gap-5">
-            <p className="flex w-fit items-center gap-3 rounded-4xl bg-gold px-7 py-4 text-xl font-semibold text-gold-foreground ring-1 ring-white/30 sm:text-2xl">
-              <HeartPulse className="size-7" aria-hidden="true" />
+            <p className="-mt-6 flex w-fit items-center gap-4 rounded-4xl bg-gold px-9 py-5 text-2xl font-semibold text-gold-foreground ring-1 ring-white/30 sm:text-3xl">
+              <HeartPulse className="size-9" aria-hidden="true" />
               薄毛・抜け毛対策の総合メディア
             </p>
             <h1 className="font-heading text-3xl leading-tight font-bold text-balance text-white sm:text-4xl lg:text-5xl">
