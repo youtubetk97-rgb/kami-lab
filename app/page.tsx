@@ -150,6 +150,21 @@ export default function HomePage() {
         </ul>
       </section>
 
+      <section className="mx-auto w-full max-w-6xl px-4 py-12">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionHeading eyebrow="ARTICLES" title="新着記事" />
+          <Button variant="ghost" size="lg" className="text-sm" nativeButton={false} render={<Link href="/articles" />}>
+            すべて見る
+            <ArrowRight data-icon="inline-end" aria-hidden="true" />
+          </Button>
+        </div>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {latestArticles.map((article) => (
+            <ArticleCard key={article.slug} article={article} />
+          ))}
+        </div>
+      </section>
+
       {PRODUCTS_PUBLISHED ? (
         <section className="mx-auto w-full max-w-6xl px-4 py-12">
           <SectionHeading
@@ -176,7 +191,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      <section className="border-y border-border bg-secondary/40">
+      <section className="border-t border-border bg-secondary/40">
         <div className="mx-auto w-full max-w-6xl px-4 py-12">
           <SectionHeading
             eyebrow="CATEGORY"
@@ -218,22 +233,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-12">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading eyebrow="ARTICLES" title="新着記事" />
-          <Button variant="ghost" size="lg" className="text-sm" nativeButton={false} render={<Link href="/articles" />}>
-            すべて見る
-            <ArrowRight data-icon="inline-end" aria-hidden="true" />
-          </Button>
-        </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {latestArticles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-border bg-secondary/40">
+      <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto w-full max-w-6xl px-4 py-12">
           <SectionHeading
             eyebrow="HOW TO START"
