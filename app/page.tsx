@@ -29,16 +29,19 @@ const trustPoints = [
     icon: ScrollText,
     title: '公開情報にもとづく整理',
     text: '販売元の公式情報や成分表示を確認し、比較しやすい形でまとめています。',
+    color: 'bg-sky-500',
   },
   {
     icon: ShieldCheck,
     title: '弱点も隠さず記載',
     text: '良い点だけでなく、気になる点や向かない人も併せて掲載しています。',
+    color: 'bg-violet-500',
   },
   {
     icon: Stethoscope,
     title: '医療は医療へ',
     text: '受診が必要な状態の目安も示し、セルフケアの範囲を明確にしています。',
+    color: 'bg-orange-500',
   },
 ]
 
@@ -48,6 +51,14 @@ const categoryIcons = {
   scalp: Sparkles,
   lifestyle: Leaf,
   women: Venus,
+} as const
+
+const categoryColors = {
+  aga: 'bg-sky-500',
+  ikumo: 'bg-violet-500',
+  scalp: 'bg-teal-500',
+  lifestyle: 'bg-amber-500',
+  women: 'bg-rose-500',
 } as const
 
 const steps = [
@@ -74,30 +85,48 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <section className="border-b border-border bg-secondary/50">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 lg:flex-row lg:items-center lg:gap-12 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-500">
+        <div
+          className="pointer-events-none absolute -top-24 -left-16 size-80 rounded-full bg-fuchsia-400/30 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-20 top-10 size-96 rounded-full bg-amber-300/30 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute bottom-[-6rem] left-1/3 size-72 rounded-full bg-sky-300/25 blur-3xl"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 lg:flex-row lg:items-center lg:gap-12 lg:py-24">
           <div className="flex flex-1 flex-col gap-5">
-            <p className="flex w-fit items-center gap-1.5 rounded-4xl bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+            <p className="flex w-fit items-center gap-1.5 rounded-4xl bg-white/15 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm">
               <HeartPulse className="size-3.5" aria-hidden="true" />
               薄毛・抜け毛の比較メディア
             </p>
-            <h1 className="font-heading text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+            <h1 className="font-heading text-3xl leading-tight font-bold text-balance text-white sm:text-4xl lg:text-5xl">
               その抜け毛、
               <br className="hidden sm:block" />
               何から始めるかで変わる。
             </h1>
-            <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
               育毛剤、スカルプケア、AGA治療。選択肢が多いからこそ迷います。ハツラボは公開情報をもとに、価格・成分・続けやすさを同じ基準で比べられるように整理しました。
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="h-11 text-sm" nativeButton={false} render={<Link href="/ranking" />}>
+              <Button
+                size="lg"
+                className="h-11 bg-white text-sm text-teal-700 hover:bg-white/90"
+                nativeButton={false}
+                render={<Link href="/ranking" />}
+              >
                 比較ランキングを見る
                 <ArrowRight data-icon="inline-end" aria-hidden="true" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="h-11 text-sm"
+                className="h-11 border-white/60 bg-white/10 text-sm text-white hover:bg-white/20"
                 nativeButton={false} render={<Link href="/articles" />}
               >
                 まず基礎から知る
@@ -105,23 +134,23 @@ export default function HomePage() {
             </div>
             <dl className="mt-2 flex flex-wrap gap-x-8 gap-y-3">
               <div className="flex flex-col">
-                <dt className="text-xs text-muted-foreground">掲載記事</dt>
-                <dd className="font-heading text-xl font-bold">{articles.length}本</dd>
+                <dt className="text-xs text-white/75">掲載記事</dt>
+                <dd className="font-heading text-xl font-bold text-white">{articles.length}本</dd>
               </div>
               <div className="flex flex-col">
-                <dt className="text-xs text-muted-foreground">比較アイテム</dt>
-                <dd className="font-heading text-xl font-bold">
+                <dt className="text-xs text-white/75">比較アイテム</dt>
+                <dd className="font-heading text-xl font-bold text-white">
                   {PRODUCTS_PUBLISHED ? `${publishedProducts.length}商品` : '準備中'}
                 </dd>
               </div>
               <div className="flex flex-col">
-                <dt className="text-xs text-muted-foreground">評価項目</dt>
-                <dd className="font-heading text-xl font-bold">4項目</dd>
+                <dt className="text-xs text-white/75">評価項目</dt>
+                <dd className="font-heading text-xl font-bold text-white">4項目</dd>
               </div>
             </dl>
           </div>
 
-          <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl bg-muted ring-1 ring-foreground/10 lg:aspect-[5/4]">
+          <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/30 lg:aspect-[5/4]">
             <Image
               src="/images/hero-clinic.png"
               alt="明るいクリニックで医師にカウンセリングを受けている男性"
@@ -139,9 +168,11 @@ export default function HomePage() {
           {trustPoints.map((point) => (
             <li
               key={point.title}
-              className="flex flex-col gap-2 rounded-xl bg-card p-4 ring-1 ring-foreground/10"
+              className="flex flex-col gap-2 rounded-xl bg-card p-4 shadow-sm ring-1 ring-foreground/10 transition-shadow hover:shadow-md"
             >
-              <span className="flex size-9 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+              <span
+                className={`flex size-9 items-center justify-center rounded-lg text-white ${point.color}`}
+              >
                 <point.icon className="size-4" aria-hidden="true" />
               </span>
               <h2 className="font-heading text-sm font-bold">{point.title}</h2>
@@ -187,13 +218,16 @@ export default function HomePage() {
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {categories.map((category) => {
               const Icon = categoryIcons[category.slug as keyof typeof categoryIcons]
+              const color = categoryColors[category.slug as keyof typeof categoryColors]
               return (
                 <li key={category.slug}>
                   <Link
                     href={`/articles?category=${category.slug}`}
-                    className="group flex h-full items-start gap-4 rounded-xl bg-card p-4 ring-1 ring-foreground/10 transition-shadow hover:shadow-md"
+                    className="group flex h-full items-start gap-4 rounded-xl bg-card p-4 shadow-sm ring-1 ring-foreground/10 transition-all hover:-translate-y-0.5 hover:shadow-lg"
                   >
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                    <span
+                      className={`flex size-10 shrink-0 items-center justify-center rounded-lg text-white ${color}`}
+                    >
                       <Icon className="size-5" aria-hidden="true" />
                     </span>
                     <span className="flex flex-col gap-1">
@@ -242,9 +276,11 @@ export default function HomePage() {
             {steps.map((item) => (
               <li
                 key={item.step}
-                className="flex flex-col gap-2 rounded-xl bg-card p-5 ring-1 ring-foreground/10"
+                className="flex flex-col gap-3 rounded-xl bg-card p-5 shadow-sm ring-1 ring-foreground/10"
               >
-                <span className="font-heading text-2xl font-bold text-primary">{item.step}</span>
+                <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 font-heading text-sm font-bold text-white">
+                  {item.step}
+                </span>
                 <h3 className="font-heading text-base font-bold">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               </li>
@@ -268,20 +304,23 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-4">
-        <div className="flex flex-col items-start gap-4 rounded-2xl bg-primary p-6 text-primary-foreground sm:p-10">
-          <span className="flex size-10 items-center justify-center rounded-lg bg-primary-foreground/15">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-500 p-6 text-white shadow-xl sm:p-10">
+          <div
+            className="pointer-events-none absolute -right-10 -top-10 size-56 rounded-full bg-white/10 blur-2xl"
+            aria-hidden="true"
+          />
+          <span className="relative flex size-10 items-center justify-center rounded-lg bg-white/15">
             <ClipboardCheck className="size-5" aria-hidden="true" />
           </span>
-          <h2 className="font-heading text-2xl leading-tight font-bold text-balance">
+          <h2 className="relative mt-4 font-heading text-2xl leading-tight font-bold text-balance">
             自分に合うケアを、同じ基準で比べる
           </h2>
-          <p className="max-w-xl text-sm leading-relaxed text-primary-foreground/85">
+          <p className="relative mt-2 max-w-xl text-sm leading-relaxed text-white/85">
             価格・成分・続けやすさを並べて比較できるランキングページを用意しました。気になる点も含めて確認してから選んでください。
           </p>
           <Button
-            variant="secondary"
             size="lg"
-            className="h-11 text-sm"
+            className="relative mt-4 h-11 bg-white text-sm text-teal-700 hover:bg-white/90"
             nativeButton={false} render={<Link href="/ranking" />}
           >
             比較ランキングを見る
