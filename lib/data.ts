@@ -1115,6 +1115,7 @@ export const articles: Article[] = [
         type: 'p',
         text: '受診を検討している期間も、シャンプーの見直しや生活習慣の調整は無駄になりません。記録を持って相談に行くと、話がスムーズに進みます。',
       },
+      { type: 'product', slug: 'newmo' },
     ],
   },
   {
@@ -1367,6 +1368,7 @@ export const articles: Article[] = [
         type: 'p',
         text: '次の記事では、20代・30代女性で特に相談が多い「産後の抜け毛」と「ダイエットと抜け毛の関係」について、それぞれ詳しく解説します。',
       },
+      { type: 'product', slug: 'scalp-d-beaute-shampoo' },
     ],
   },
   {
@@ -1609,6 +1611,7 @@ export const articles: Article[] = [
         title: '相談先に迷ったら',
         text: '婦人科では更年期症状全体について、皮膚科では頭皮・毛髪の状態について、それぞれ専門的に相談できます。どちらに相談すべきか迷う場合は、まずかかりつけ医に相談するのも一つの方法です。',
       },
+      { type: 'product', slug: 'scalp-d-beaute-shampoo' },
     ],
   },
   {
@@ -1745,6 +1748,7 @@ export const articles: Article[] = [
         title: 'パターンだけで自己診断しない',
         text: 'ここで紹介した分類はあくまで一般的な目安です。実際の進行度や原因の特定には専門的な診察が必要になるため、気になる変化があれば自己判断で対策を続ける前に、皮膚科やAGA専門クリニックへの相談も検討してください。',
       },
+      { type: 'product', slug: 'scalp-d-medicated-shampoo' },
     ],
   },
   {
@@ -1949,6 +1953,7 @@ export const articles: Article[] = [
         title: '選び方の目安',
         text: '進行を積極的に抑えたい・発毛を目指したい場合は医薬品やクリニックでの相談が選択肢になり、予防や頭皮環境を整える目的であれば医薬部外品・化粧品も選択肢になります。目的に応じて分類を確認しながら選ぶことをおすすめします。',
       },
+      { type: 'product', slug: 'scalp-d-medicated-tonic' },
     ],
   },
   {
