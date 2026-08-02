@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Sparkles,
   Stethoscope,
+  Venus,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -46,6 +47,7 @@ const categoryIcons = {
   ikumo: FlaskConical,
   scalp: Sparkles,
   lifestyle: Leaf,
+  women: Venus,
 } as const
 
 const steps = [
@@ -180,7 +182,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="CATEGORY"
             title="悩みから記事を探す"
-            description="気になっているところから読み進められるよう、4つのカテゴリに分けています。"
+            description="気になっているところから読み進められるよう、カテゴリごとに分けています。"
           />
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {categories.map((category) => {

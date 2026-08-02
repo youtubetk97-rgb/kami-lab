@@ -5,13 +5,13 @@ import { ProductMiniCard } from '@/components/product-mini-card'
 import { SectionHeading } from '@/components/section-heading'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { articles, categories, getCategory, products } from '@/lib/data'
+import { articles, categories, getCategory, publishedProducts } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: '記事一覧',
   description:
-    'AGA・育毛剤・スカルプケア・生活習慣の4カテゴリで、薄毛対策の基礎知識と選び方をまとめた記事一覧です。',
+    'AGA・育毛剤・スカルプケア・生活習慣・女性の薄毛のカテゴリで、薄毛対策の基礎知識と選び方をまとめた記事一覧です。',
 }
 
 export default async function ArticlesPage({
@@ -97,7 +97,7 @@ export default async function ArticlesPage({
             <h2 className="font-heading text-sm font-bold">人気ランキング</h2>
             <p className="mt-1 text-xs text-muted-foreground">編集部の比較スコア順</p>
             <div className="mt-4 flex flex-col gap-3">
-              {products.slice(0, 3).map((product) => (
+              {publishedProducts.slice(0, 3).map((product) => (
                 <ProductMiniCard key={product.slug} product={product} />
               ))}
             </div>
