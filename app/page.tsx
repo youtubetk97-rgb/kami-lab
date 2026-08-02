@@ -116,41 +116,6 @@ export default function HomePage() {
             <p className="max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
               薄毛・抜け毛の悩みは世代や性別を問わず、多くの方が抱えている非常にデリケートで深刻な問題です。適切な対処を行うためには、原因を知り、自分に合ったアプローチを選ぶことが大切です。自力でのケアには限界がある場合も多いため、進行性の場合は専門医に相談するのが最も確実です。
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button
-                size="lg"
-                className="h-11 bg-white text-sm text-teal-700 hover:bg-white/90"
-                nativeButton={false}
-                render={<Link href="/ranking" />}
-              >
-                比較ランキングを見る
-                <ArrowRight data-icon="inline-end" aria-hidden="true" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-11 border-white/60 bg-white/10 text-sm text-white hover:bg-white/20"
-                nativeButton={false} render={<Link href="/articles" />}
-              >
-                まず基礎から知る
-              </Button>
-            </div>
-            <dl className="mt-2 flex flex-wrap gap-x-8 gap-y-3">
-              <div className="flex flex-col">
-                <dt className="text-xs text-white/75">掲載記事</dt>
-                <dd className="font-heading text-xl font-bold text-white">{articles.length}本</dd>
-              </div>
-              <div className="flex flex-col">
-                <dt className="text-xs text-white/75">比較アイテム</dt>
-                <dd className="font-heading text-xl font-bold text-white">
-                  {PRODUCTS_PUBLISHED ? `${publishedProducts.length}商品` : '準備中'}
-                </dd>
-              </div>
-              <div className="flex flex-col">
-                <dt className="text-xs text-white/75">評価項目</dt>
-                <dd className="font-heading text-xl font-bold text-white">4項目</dd>
-              </div>
-            </dl>
           </div>
 
           <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/30 lg:aspect-[5/4]">
