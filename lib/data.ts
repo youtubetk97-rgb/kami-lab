@@ -579,8 +579,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,
-    image: '/images/article-shampoo.png',
-    imageAlt: 'シャンプー中に頭皮をマッサージしている様子',
+    image: '/images/article-scalp-massage-spa.jpg',
+    imageAlt: 'スパで頭部にマッサージを受けている女性',
     tags: ['頭皮マッサージ', 'セルフケア', 'スカルプケア'],
     body: [
       {
@@ -791,8 +791,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,
-    image: '/images/article-sleep.png',
-    imageAlt: 'ベッドで横になり休んでいる女性',
+    image: '/images/article-postpartum-mother.jpg',
+    imageAlt: '生まれたばかりの赤ちゃんを抱く母親',
     tags: ['産後脱毛', '女性の薄毛', 'ホルモンバランス'],
     body: [
       {
@@ -886,8 +886,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
-    image: '/images/hero-clinic.png',
-    imageAlt: '医師と治療方針について相談している様子',
+    image: '/images/article-treatment-calendar.jpg',
+    imageAlt: '手帳のカレンダーに書き込む手元',
     tags: ['AGA', '治療効果', '公表データ'],
     body: [
       {
@@ -933,8 +933,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 5,
-    image: '/images/hero-clinic.png',
-    imageAlt: '医師との相談の様子をイメージした写真',
+    image: '/images/article-reading-reviews.jpg',
+    imageAlt: 'ソファでスマートフォンを操作している女性',
     tags: ['口コミ', '体験談', 'AGA'],
     body: [
       {
@@ -980,8 +980,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
-    image: '/images/article-sleep.png',
-    imageAlt: '自宅でくつろぐ女性の写真',
+    image: '/images/article-midlife-woman.jpg',
+    imageAlt: '屋外で笑顔を見せる中高年女性',
     tags: ['びまん性脱毛症', '更年期', '女性の薄毛'],
     body: [
       {
@@ -1077,8 +1077,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
-    image: '/images/hero-clinic.png',
-    imageAlt: '医師と向き合ってAGAについて相談する男性',
+    image: '/images/article-male-mirror-check.jpg',
+    imageAlt: '屋外の鏡で自分の姿を確認している男性',
     tags: ['薄毛パターン', 'AGA', 'セルフチェック'],
     body: [
       {
