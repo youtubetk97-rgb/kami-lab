@@ -21,7 +21,8 @@ import {
 import { ProductRankCard } from '@/components/product-rank-card'
 import { SectionHeading } from '@/components/section-heading'
 import { StarRating } from '@/components/star-rating'
-import { PRODUCTS_PUBLISHED, publishedProducts } from '@/lib/data'
+import { PRODUCTS_PUBLISHED, productCategories, publishedProducts } from '@/lib/data'
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: '育毛・スカルプケア比較ランキング',
@@ -48,7 +49,17 @@ const criteria = [
   },
 ]
 
-export default function RankingPage() {
+export default async function RankingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>
+}) {
+  const { category } = await searchParams
+  const activeCategory = productCategories.find((item) => item.slug === category)
+  const filteredProducts = activeCategory
+    ? publishedProducts.filter((product) => product.category === activeCategory.slug)
+    : publishedProducts
+
   return (
     <div className="flex flex-col">
       <div className="border-b border-border bg-secondary/50">
@@ -101,8 +112,46 @@ export default function RankingPage() {
 
       {PRODUCTS_PUBLISHED ? (
         <>
+          <section className="mx-auto w-full max-w-4xl px-4 pt-2 pb-6">
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/ranking"
+                className={cn(
+                  'rounded-full px-3.5 py-1.5 text-xs font-bold ring-1 transition-colors',
+                  !activeCategory
+                    ? 'bg-primary text-primary-foreground ring-primary'
+                    : 'bg-card text-muted-foreground ring-border hover:text-primary',
+                )}
+              >
+                すべて（{publishedProducts.length}）
+              </Link>
+              {productCategories.map((item) => {
+                const count = publishedProducts.filter((product) => product.category === item.slug).length
+                if (count === 0) return null
+                const active = activeCategory?.slug === item.slug
+                return (
+                  <Link
+                    key={item.slug}
+                    href={`/ranking?category=${item.slug}`}
+                    className={cn(
+                      'rounded-full px-3.5 py-1.5 text-xs font-bold ring-1 transition-colors',
+                      active
+                        ? 'bg-primary text-primary-foreground ring-primary'
+                        : 'bg-card text-muted-foreground ring-border hover:text-primary',
+                    )}
+                  >
+                    {item.name}（{count}）
+                  </Link>
+                )
+              })}
+            </div>
+          </section>
+
           <section className="mx-auto w-full max-w-4xl px-4 pb-10">
-            <SectionHeading eyebrow="COMPARISON" title="一覧で比較する" />
+            <SectionHeading
+              eyebrow="COMPARISON"
+              title={activeCategory ? `${activeCategory.name}を比較する` : '一覧で比較する'}
+            />
             <div className="mt-6 overflow-hidden rounded-xl ring-1 ring-foreground/10">
               <Table>
                 <TableHeader>
@@ -114,7 +163,7 @@ export default function RankingPage() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {publishedProducts.map((product) => (
+                  {filteredProducts.map((product) => (
                     <TableRow key={product.slug}>
                       <TableCell className="font-heading font-bold">{product.rank}位</TableCell>
                       <TableCell>
@@ -142,7 +191,7 @@ export default function RankingPage() {
           <section className="mx-auto w-full max-w-4xl px-4 pb-12">
             <SectionHeading eyebrow="DETAIL" title="各商品の詳しい評価" />
             <div className="mt-6 flex flex-col gap-8">
-              {publishedProducts.map((product) => (
+              {filteredProducts.map((product) => (
                 <ProductRankCard key={product.slug} product={product} />
               ))}
             </div>

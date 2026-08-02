@@ -4,9 +4,34 @@ export type Category = {
   description: string
 }
 
+export type ProductCategory = {
+  slug: string
+  name: string
+  description: string
+}
+
+export const productCategories: ProductCategory[] = [
+  {
+    slug: 'shampoo',
+    name: 'スカルプシャンプー',
+    description: '毎日の洗浄で頭皮環境を整えるタイプの商品です。',
+  },
+  {
+    slug: 'tonic',
+    name: '育毛トニック・育毛剤',
+    description: '有効成分を頭皮に直接塗布するタイプの商品です。',
+  },
+  {
+    slug: 'clinic',
+    name: 'AGAクリニック',
+    description: '医療機関でのAGA治療プランです。',
+  },
+]
+
 export type Product = {
   slug: string
   rank: number
+  category: 'shampoo' | 'tonic' | 'clinic'
   name: string
   brand: string
   type: string
@@ -96,6 +121,7 @@ export const products: Product[] = [
   {
     slug: 'levcli',
     rank: 1,
+    category: 'clinic',
     name: 'レバクリ',
     brand: 'オンライン完結のAGA診療',
     type: 'AGAオンライン診療（対面院なし）',
@@ -130,6 +156,7 @@ export const products: Product[] = [
   {
     slug: 'aga-skin-clinic',
     rank: 2,
+    category: 'clinic',
     name: 'AGAスキンクリニック',
     brand: '全国60院以上のAGA専門クリニック',
     type: 'AGA専門クリニック（対面＋オンライン対応）',
@@ -165,6 +192,7 @@ export const products: Product[] = [
   {
     slug: 'gincli',
     rank: 3,
+    category: 'clinic',
     name: '銀座総合美容クリニック（銀クリ）',
     brand: '東京・大阪のAGA専門クリニック',
     type: 'AGA専門クリニック（東京・大阪2拠点＋オンライン対応）',
@@ -200,6 +228,7 @@ export const products: Product[] = [
   {
     slug: 'premium-black-shampoo',
     rank: 4,
+    category: 'shampoo',
     name: 'プレミアムブラックシャンプー',
     brand: '&GINO',
     type: 'スカルプシャンプー（頭皮ケア）',
@@ -230,6 +259,7 @@ export const products: Product[] = [
   {
     slug: 'root-beaute-scalp-shampoo',
     rank: 5,
+    category: 'shampoo',
     name: 'ROOT BEAUTÉ スカルプマッサージシャンプー',
     brand: '綺和美（KIWABI）',
     type: 'スカルプシャンプー（頭皮ケア）',
@@ -260,6 +290,7 @@ export const products: Product[] = [
   {
     slug: 'riup-scalp-shampoo',
     rank: 6,
+    category: 'shampoo',
     name: 'リアップ スカルプシャンプー（つめかえ用 350mL×2個）',
     brand: '大正製薬',
     type: '薬用シャンプー（医薬部外品）',
@@ -298,6 +329,7 @@ export const products: Product[] = [
   {
     slug: 'nile-scalp-shampoo',
     rank: 7,
+    category: 'shampoo',
     name: 'NILE 濃密泡スカルプシャンプー',
     brand: 'NILE（ナイル）',
     type: 'スカルプシャンプー',
@@ -337,6 +369,7 @@ export const products: Product[] = [
   {
     slug: 'chapup-shampoo',
     rank: 8,
+    category: 'shampoo',
     name: 'チャップアップ（CHAP UP）シャンプー',
     brand: 'CHAP UP（ソーシャルテック）',
     type: 'スカルプシャンプー',
@@ -376,6 +409,7 @@ export const products: Product[] = [
   {
     slug: 'scalp-d-medicated-shampoo',
     rank: 9,
+    category: 'shampoo',
     name: 'スカルプD 薬用スカルプシャンプー',
     brand: 'アンファー（ANGFA）',
     type: '薬用シャンプー（医薬部外品）',
@@ -407,6 +441,7 @@ export const products: Product[] = [
   {
     slug: 'botanist-botanical-shampoo',
     rank: 10,
+    category: 'shampoo',
     name: 'BOTANIST ボタニカルシャンプー（ダメージケア）',
     brand: 'BOTANIST（I-ne）',
     type: 'ボタニカルシャンプー（化粧品）',
@@ -438,6 +473,7 @@ export const products: Product[] = [
   {
     slug: 'scalp-d-beaute-shampoo',
     rank: 11,
+    category: 'shampoo',
     name: 'スカルプDボーテ 薬用スカルプシャンプー ボリューム',
     brand: 'アンファー（ANGFA）',
     type: '薬用シャンプー（医薬部外品・女性用）',
@@ -469,6 +505,7 @@ export const products: Product[] = [
   {
     slug: 'scalp-d-medicated-tonic',
     rank: 12,
+    category: 'tonic',
     name: 'スカルプD 薬用育毛スカルプトニック（JET）',
     brand: 'アンファー（ANGFA）',
     type: '薬用育毛トニック（医薬部外品）',
@@ -500,6 +537,7 @@ export const products: Product[] = [
   {
     slug: 'polypure-ex',
     rank: 13,
+    category: 'tonic',
     name: 'ポリピュアEX',
     brand: 'シーエスシー（CSC）',
     type: '育毛剤（医薬部外品・スプレータイプ）',
@@ -531,6 +569,7 @@ export const products: Product[] = [
   {
     slug: 'newmo',
     rank: 14,
+    category: 'tonic',
     name: 'ニューモ（NEWMO）',
     brand: 'ファーマフーズ',
     type: '育毛剤（医薬部外品）',
@@ -562,6 +601,7 @@ export const products: Product[] = [
   {
     slug: 'chapup-lotion',
     rank: 15,
+    category: 'tonic',
     name: 'チャップアップ 育毛ローション',
     brand: 'CHAP UP（ソーシャルテック）',
     type: '育毛剤（医薬部外品・育毛ローション）',
