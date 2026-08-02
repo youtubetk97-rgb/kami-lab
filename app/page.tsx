@@ -108,7 +108,7 @@ export default function HomePage() {
             <h1 className="font-heading text-3xl leading-tight font-bold text-balance text-white sm:text-4xl lg:text-5xl">
               その抜け毛、
               <br className="hidden sm:block" />
-              何から始めるかで変わる。
+              今から始めませんか。
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
               育毛剤、スカルプケア、AGA治療。選択肢が多いからこそ迷います。ハツラボは公開情報をもとに、価格・成分・続けやすさを同じ基準で比べられるように整理しました。
