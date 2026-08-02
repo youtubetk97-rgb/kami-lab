@@ -7,6 +7,7 @@ import { ArticleCard } from '@/components/article-card'
 import { HairPatternDiagram } from '@/components/hair-pattern-diagram'
 import { ProductInlineCard } from '@/components/product-inline-card'
 import { ScalpMassageDiagram } from '@/components/scalp-massage-diagram'
+import { ShampooStepsDiagram } from '@/components/shampoo-steps-diagram'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -196,6 +197,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               return <HairPatternDiagram key={index} />
             case 'scalpMassageDiagram':
               return <ScalpMassageDiagram key={index} />
+            case 'shampooStepsDiagram':
+              return <ShampooStepsDiagram key={index} />
             default:
               return null
           }
