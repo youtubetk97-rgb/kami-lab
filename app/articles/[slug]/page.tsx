@@ -8,7 +8,6 @@ import { ProductInlineCard } from '@/components/product-inline-card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import {
-  PRODUCTS_PUBLISHED,
   articles,
   formatDate,
   getArticle,
@@ -187,9 +186,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
               )
             case 'product': {
-              if (!PRODUCTS_PUBLISHED) return null
               const product = getProduct(block.slug)
-              if (!product) return null
+              if (!product || !product.published) return null
               return <ProductInlineCard key={index} product={product} />
             }
             default:

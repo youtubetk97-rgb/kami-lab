@@ -54,9 +54,7 @@ export function ProductRankCard({ product }: { product: Product }) {
             <StarRating score={product.score} />
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 pt-1">
               <span className="font-heading text-xl font-bold">{product.monthlyPrice}</span>
-              <span className="text-xs text-muted-foreground line-through">
-                通常 {product.price}
-              </span>
+              <span className="text-xs text-muted-foreground">{product.price}</span>
             </div>
             <p className="text-xs text-accent-foreground">{product.guarantee}</p>
           </div>
@@ -116,7 +114,7 @@ export function ProductRankCard({ product }: { product: Product }) {
 
         <div className="flex flex-col gap-2 border-t border-border pt-4">
           <p className="text-xs text-muted-foreground">
-            主な成分：{product.ingredients.join('・')}
+            主な特徴・メニュー：{product.ingredients.join('・')}
           </p>
           <Button
             size="lg"

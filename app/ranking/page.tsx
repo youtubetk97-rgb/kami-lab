@@ -21,7 +21,7 @@ import {
 import { ProductRankCard } from '@/components/product-rank-card'
 import { SectionHeading } from '@/components/section-heading'
 import { StarRating } from '@/components/star-rating'
-import { PRODUCTS_PUBLISHED, products } from '@/lib/data'
+import { PRODUCTS_PUBLISHED, publishedProducts } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: '育毛・スカルプケア比較ランキング',
@@ -114,7 +114,7 @@ export default function RankingPage() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {products.map((product) => (
+                  {publishedProducts.map((product) => (
                     <TableRow key={product.slug}>
                       <TableCell className="font-heading font-bold">{product.rank}位</TableCell>
                       <TableCell>
@@ -129,7 +129,7 @@ export default function RankingPage() {
                       <TableCell className="text-right whitespace-nowrap">
                         <span className="flex flex-col items-end">
                           <span className="font-medium">{product.monthlyPrice}</span>
-                          <span className="text-xs text-muted-foreground">通常 {product.price}</span>
+                          <span className="text-xs text-muted-foreground">{product.price}</span>
                         </span>
                       </TableCell>
                     </TableRow>
@@ -142,7 +142,7 @@ export default function RankingPage() {
           <section className="mx-auto w-full max-w-4xl px-4 pb-12">
             <SectionHeading eyebrow="DETAIL" title="各商品の詳しい評価" />
             <div className="mt-6 flex flex-col gap-8">
-              {products.map((product) => (
+              {publishedProducts.map((product) => (
                 <ProductRankCard key={product.slug} product={product} />
               ))}
             </div>

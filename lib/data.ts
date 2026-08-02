@@ -25,6 +25,9 @@ export type Product = {
   ingredients: string[]
   guarantee: string
   affiliateUrl: string
+  // 提携審査が完了し、実際のトラッキングリンク(affiliateUrl)に差し替えるまでは
+  // falseのままにしておく。falseの商品はランキング・記事内カードに表示されない。
+  published: boolean
 }
 
 export type ArticleBlock =
@@ -73,129 +76,184 @@ export const categories: Category[] = [
   },
 ]
 
-// v0で生成された商品データ(ブランド名・価格・成分・返金保証など)は実在確認できない
-// プレースホルダーです。ASP審査通過後、実際に提携する商品の実データに置き換えるまで
-// このフラグをfalseのままにして、商品カード・ランキングの表示を止めてください。
-export const PRODUCTS_PUBLISHED = false
-
+// 2026年8月、公式サイト情報をもとに調査した実データに置き換え済み。
+// 各商品の published は、A8.net提携が承認されaffiliateUrlが実際の
+// トラッキングリンクに差し替わってから true にすること。
 export const products: Product[] = [
   {
-    slug: 'scalp-serum-pro',
+    slug: 'levcli',
     rank: 1,
-    name: 'スカルプセラム PRO',
-    brand: 'HATSU LABO',
-    type: '薬用育毛剤（医薬部外品）',
+    name: 'レバクリ',
+    brand: 'オンライン完結のAGA診療',
+    type: 'AGAオンライン診療（対面院なし）',
     image: '/images/product-serum.png',
-    price: '7,980円',
-    monthlyPrice: '初回 2,980円',
-    score: 4.8,
+    price: '自由診療・配送料550〜1,100円/回',
+    monthlyPrice: '月1,349円〜',
+    score: 4.6,
     scores: [
-      { label: 'コスパ', value: 4.5 },
-      { label: '使いやすさ', value: 5.0 },
-      { label: '成分の充実度', value: 4.9 },
+      { label: 'コスパ', value: 4.9 },
+      { label: 'オンライン対応', value: 4.8 },
+      { label: 'メニューの幅', value: 4.0 },
       { label: '続けやすさ', value: 4.7 },
     ],
     summary:
-      '有効成分3種を配合した医薬部外品の育毛剤。ノズルが細く狙った部分に塗布しやすいため、生え際や頭頂部を中心にケアしたい人が選びやすい一本です。',
-    highlights: ['有効成分3種を配合', '無香料・ベタつきにくい処方', '定期縛りなしで解約可能'],
+      '初診から薬の受け取りまで完全オンラインで完結するAGA診療サービス。フィナステリド単剤なら月1,349円〜と価格の低さが特徴で、深夜2時まで診察に対応しています。',
+    highlights: ['初診料・診察料0円', '深夜2時まで診察対応', '副作用発生時は全額返金保証'],
     pros: [
-      '1本で約1か月分、朝晩2回でも使い切りやすい容量',
-      'ノズルが細く、分け目や生え際にピンポイントで塗布できる',
-      '初回価格が安く、まず試してみたい人にも始めやすい',
+      '月1,349円〜とオンラインAGA診療の中でも価格帯が低い',
+      '通院不要で自宅から診察〜薬の受け取りまで完結できる',
+      '医薬品を第三者機関で検査するなど品質面の取り組みがある',
     ],
-    cons: ['店頭での取り扱いが少なく、基本は公式サイトからの購入', '香りのバリエーションがない'],
-    ingredients: ['センブリエキス', 'グリチルリチン酸ジカリウム', 'パントテニルエチルエーテル'],
-    guarantee: '30日間の返金保証あり',
+    cons: ['対面での診察・処置は選べない', 'プラン数が多く、初めてだと選択に迷いやすい'],
+    ingredients: [
+      'フィナステリド単剤プラン',
+      'フィナステリド+ミノキシジル内服プラン',
+      '定期配送（6/12/24ヶ月ごと）',
+    ],
+    guarantee: '副作用発生時の全額返金保証制度あり（規定条件あり）',
     affiliateUrl: '#',
+    published: false,
   },
   {
-    slug: 'scalp-tonic-black',
+    slug: 'aga-skin-clinic',
     rank: 2,
-    name: 'スカルプトニック BLACK',
-    brand: 'MENS AXIS',
-    type: '薬用トニック（医薬部外品）',
+    name: 'AGAスキンクリニック',
+    brand: '全国60院以上のAGA専門クリニック',
+    type: 'AGA専門クリニック（対面＋オンライン対応）',
     image: '/images/product-tonic.png',
-    price: '5,480円',
-    monthlyPrice: '定期 4,380円',
-    score: 4.5,
+    price: '自由診療（プランにより月4,400円〜11万円台まで幅あり）',
+    monthlyPrice: '予防プラン 月6,600円〜',
+    score: 4.4,
     scores: [
-      { label: 'コスパ', value: 4.8 },
-      { label: '使いやすさ', value: 4.6 },
-      { label: '成分の充実度', value: 4.2 },
-      { label: '続けやすさ', value: 4.6 },
+      { label: 'コスパ', value: 3.8 },
+      { label: 'オンライン対応', value: 4.8 },
+      { label: 'メニューの幅', value: 4.9 },
+      { label: '続けやすさ', value: 4.3 },
     ],
     summary:
-      'スプレータイプで頭皮全体に広げやすい薬用トニック。清涼感のある使用感で、皮脂やムレが気になる季節のケアに向いています。',
-    highlights: ['広範囲に使いやすいスプレー式', 'さっぱりした清涼感', '1本あたりの価格が控えめ'],
+      '全国60院以上を展開する対面重視のAGA専門クリニック（2026年1月時点、提携院含む）。内服薬から発毛メソセラピー・注入治療まで幅広いメニューを取り揃えています。',
+    highlights: ['全国60院以上・提携院含む', '初診料・カウンセリング・血液検査が無料', '条件付きの全額返金制度あり'],
     pros: [
-      '一度の噴射範囲が広く、頭皮全体をケアしたい人に向く',
-      '価格が抑えられており、長く続けやすい',
-      'ドラッグストアでも見つけやすい',
+      '近くに院があれば対面での診察・処置を受けやすい',
+      '内服だけでなくメソセラピーや注入治療まで選択肢が広い',
+      '予防目的の内服単体プランは月6,600円〜と始めやすい',
     ],
-    cons: ['清涼感が強く、刺激を感じやすい人には向かない場合がある', '香りがやや強め'],
-    ingredients: ['ニンジンエキス', 'グリチルリチン酸ジカリウム', 'l-メントール'],
-    guarantee: '未開封のみ返品可',
+    cons: ['発毛を目指す上位プランは月10万円前後になることもある', '一部の割引プランは対象院が限定される'],
+    ingredients: [
+      '内服薬（フィナステリド／デュタステリド）',
+      'オリジナル外用薬',
+      'メソセラピー・注入治療',
+      '血液検査（条件付き無料）',
+    ],
+    guarantee: '条件付きの全額返金制度あり（詳細は公式サイトで要確認）',
     affiliateUrl: '#',
+    published: false,
   },
   {
-    slug: 'hair-support-supplement',
+    slug: 'gincli',
     rank: 3,
-    name: 'ヘアサポート サプリ',
-    brand: 'INNER CARE',
-    type: '栄養補助食品',
-    image: '/images/product-supplement.png',
-    price: '3,980円',
-    monthlyPrice: '定期 3,180円',
-    score: 4.2,
+    name: '銀座総合美容クリニック（銀クリ）',
+    brand: '東京・大阪のAGA専門クリニック',
+    type: 'AGA専門クリニック（東京・大阪2拠点＋オンライン対応）',
+    image: '/images/product-shampoo.png',
+    price: '自由診療（2ヶ月目以降は薬代のみ）',
+    monthlyPrice: '初月1,000円〜',
+    score: 3.8,
     scores: [
-      { label: 'コスパ', value: 4.4 },
-      { label: '使いやすさ', value: 4.8 },
-      { label: '成分の充実度', value: 4.0 },
-      { label: '続けやすさ', value: 4.5 },
+      { label: 'コスパ', value: 4.0 },
+      { label: 'オンライン対応', value: 3.6 },
+      { label: 'メニューの幅', value: 4.2 },
+      { label: '続けやすさ', value: 3.8 },
     ],
     summary:
-      '亜鉛やビオチンなど、髪の材料となる栄養素をまとめて補えるサプリメント。外側のケアと組み合わせて内側から整えたい人向けです。',
-    highlights: ['1日2粒で続けやすい', '亜鉛・ビオチン・鉄を配合', '国内GMP工場で製造'],
+      '東京・大阪の2拠点で展開するAGA専門クリニック。初診からオンライン診療にも対応し、院内調剤のオリジナル治療薬が特徴です。初月1,000円で治療を始められます。',
+    highlights: ['初月1,000円から治療開始', '院内調剤のオリジナル治療薬', '初診からオンライン診療に対応'],
     pros: [
-      '食事だけでは補いにくい栄養素をまとめて摂れる',
-      '粒が小さく、においが控えめで飲みやすい',
-      '外用ケアと併用しやすい',
+      '初月1,000円と初期費用を抑えて試しやすい',
+      '2ヶ月目以降は薬代のみで、追加費用がわかりやすい',
+      'GGF発毛メソセラピーやAGA遺伝子診断など専門メニューもある',
     ],
-    cons: ['体感までに時間がかかりやすい', '薬を服用中の人は事前に医師へ相談が必要'],
-    ingredients: ['亜鉛', 'ビオチン', 'ヘム鉄', 'L-シスチン'],
-    guarantee: '定期は初回のみで解約可',
+    cons: ['対面の拠点は東京・大阪の2院のみ', '発毛を目指す治療は月2万円前後になる場合がある'],
+    ingredients: [
+      '院内調剤オリジナル内服薬',
+      'GGF発毛メソセラピー',
+      'LEDセラピー',
+      'AGA遺伝子診断',
+    ],
+    guarantee: '返金保証の詳細は公式サイトでご確認ください',
     affiliateUrl: '#',
+    published: false,
   },
   {
-    slug: 'scalp-shampoo-clear',
+    slug: 'premium-black-shampoo',
     rank: 4,
-    name: 'スカルプシャンプー CLEAR',
-    brand: 'AQUA DERM',
-    type: 'スカルプシャンプー',
-    image: '/images/product-shampoo.png',
-    price: '3,280円',
-    monthlyPrice: '定期 2,620円',
-    score: 4.0,
+    name: 'プレミアムブラックシャンプー',
+    brand: '&GINO',
+    type: 'スカルプシャンプー（頭皮ケア）',
+    image: '',
+    price: '通常5,184円（税込）',
+    monthlyPrice: '定期4,666円/月〜',
+    score: 4.3,
     scores: [
-      { label: 'コスパ', value: 4.2 },
-      { label: '使いやすさ', value: 4.5 },
-      { label: '成分の充実度', value: 3.8 },
-      { label: '続けやすさ', value: 4.4 },
+      { label: 'コスパ', value: 3.8 },
+      { label: '使用感', value: 4.5 },
+      { label: '成分の充実度', value: 4.6 },
+      { label: '続けやすさ', value: 4.2 },
     ],
     summary:
-      'アミノ酸系の洗浄成分をベースにしたスカルプシャンプー。洗浄力が穏やかで、乾燥やかゆみが気になる頭皮でも使いやすい設計です。',
-    highlights: ['アミノ酸系のやさしい洗浄', 'シリコン・着色料フリー', '泡立ちが良く流しやすい'],
+      '楽天ランキングの低刺激性シャンプー部門で1位を獲得した実績を持つスカルプシャンプー。植物由来成分21種を配合し、ノンシリコン・アミノ酸系・弱酸性処方で頭皮と髪をケアします。',
+    highlights: ['楽天ランキング低刺激性シャンプー部門1位の実績', '植物由来成分21種配合', 'ノンシリコン・アミノ酸系・弱酸性処方'],
     pros: [
-      '洗い上がりがつっぱりにくく、乾燥しやすい頭皮でも使いやすい',
-      '毎日の習慣を変えずに置き換えるだけで始められる',
-      '家族と共用しやすい香り',
+      '洗浄と3分間のヘアパックが1本で完結し、コンディショナーが不要',
+      '石油系界面活性剤・防腐剤・合成香料・着色料を使用しない処方',
+      '定期購入だと1本あたり10%オフ・送料無料になる',
     ],
-    cons: ['整髪料をしっかり使う日は二度洗いが必要な場合がある', '育毛剤ほどの成分の充実度はない'],
-    ingredients: ['ココイルグルタミン酸TEA', 'グリチルリチン酸2K', 'ヒアルロン酸Na'],
-    guarantee: '定期は回数縛りなし',
-    affiliateUrl: '#',
+    cons: ['単品購入だと5,000円台とやや高価格帯', '定期便は基本2ヶ月ごとの配送が前提'],
+    ingredients: ['ノンシリコン', 'アミノ酸系洗浄成分', '弱酸性処方', '植物由来成分21種配合'],
+    guarantee: '定期購入の解約条件・配送間隔の詳細は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4B9W9B+C7ZCTU+4P4W+TSJ41',
+    published: true,
+  },
+  {
+    slug: 'root-beaute-scalp-shampoo',
+    rank: 5,
+    name: 'ROOT BEAUTÉ スカルプマッサージシャンプー',
+    brand: '綺和美（KIWABI）',
+    type: 'スカルプシャンプー（頭皮ケア）',
+    image: '',
+    price: '3,680円（税込・300mL）',
+    monthlyPrice: '定期購入で最大30%オフ',
+    score: 4.1,
+    scores: [
+      { label: 'コスパ', value: 4.0 },
+      { label: '使用感', value: 4.3 },
+      { label: '成分の充実度', value: 4.2 },
+      { label: '続けやすさ', value: 4.0 },
+    ],
+    summary:
+      'アミノ酸系弱酸性処方でクリーミーな泡立ちが特徴のスカルプシャンプー。23種のボタニカルエキス・精油を配合し、頭皮環境を整えながらハリ・コシのある髪を目指します。',
+    highlights: ['23種のボタニカルエキス・精油を配合', '8成分無添加処方', '配送間隔を選べる定期購入'],
+    pros: [
+      'クリーミーな泡立ちで頭皮マッサージがしやすい',
+      '無添加処方で、頭皮への刺激を抑えたい人に選びやすい',
+      '定期購入は配送間隔を選択でき、送料も無料',
+    ],
+    cons: ['単品購入時の割引は定期購入ほど大きくない', '香りやテクスチャの好みが分かれやすい'],
+    ingredients: ['アミノ酸系洗浄成分', '弱酸性処方', 'ボタニカルエキス・精油23種配合'],
+    guarantee: '定期購入の解約条件・最低購入回数は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4B9W9B+C7DX82+1JHI+1ZO5SX',
+    published: true,
   },
 ]
+
+// 公開中の商品だけを対象に、スコア順で表示用の順位(rank)を振り直す。
+// products配列上のrankは編集用の通し番号であり、表示にはこちらを使う。
+export const publishedProducts = products
+  .filter((product) => product.published)
+  .sort((a, b) => b.score - a.score)
+  .map((product, index) => ({ ...product, rank: index + 1 }))
+
+export const PRODUCTS_PUBLISHED = publishedProducts.length > 0
 
 export const articles: Article[] = [
   {
@@ -309,7 +367,7 @@ export const articles: Article[] = [
         title: 'チェックリスト',
         text: '「初回だけ安い」価格ではなく、2回目以降の価格で総額を計算するのがコツです。回数縛りの有無、返金保証の期間も合わせて控えておきましょう。',
       },
-      { type: 'product', slug: 'scalp-tonic-black' },
+      { type: 'product', slug: 'root-beaute-scalp-shampoo' },
     ],
   },
   {
@@ -363,7 +421,7 @@ export const articles: Article[] = [
         title: '洗浄力を見直すなら',
         text: '洗い方を整えてもつっぱる、かゆいという場合は、洗浄成分がご自身に強すぎる可能性があります。アミノ酸系など穏やかなタイプへの切り替えも選択肢です。',
       },
-      { type: 'product', slug: 'scalp-shampoo-clear' },
+      { type: 'product', slug: 'premium-black-shampoo' },
     ],
   },
   {

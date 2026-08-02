@@ -21,7 +21,7 @@ import {
 import { ArticleCard } from '@/components/article-card'
 import { ProductMiniCard } from '@/components/product-mini-card'
 import { SectionHeading } from '@/components/section-heading'
-import { PRODUCTS_PUBLISHED, articles, categories, faqs, products } from '@/lib/data'
+import { PRODUCTS_PUBLISHED, articles, categories, faqs, publishedProducts } from '@/lib/data'
 
 const trustPoints = [
   {
@@ -67,7 +67,7 @@ const steps = [
 ]
 
 export default function HomePage() {
-  const topProducts = products.slice(0, 3)
+  const topProducts = publishedProducts.slice(0, 3)
   const latestArticles = articles.slice(0, 4)
 
   return (
@@ -109,7 +109,7 @@ export default function HomePage() {
               <div className="flex flex-col">
                 <dt className="text-xs text-muted-foreground">比較アイテム</dt>
                 <dd className="font-heading text-xl font-bold">
-                  {PRODUCTS_PUBLISHED ? `${products.length}商品` : '準備中'}
+                  {PRODUCTS_PUBLISHED ? `${publishedProducts.length}商品` : '準備中'}
                 </dd>
               </div>
               <div className="flex flex-col">
@@ -168,7 +168,7 @@ export default function HomePage() {
               className="h-11 text-sm"
               nativeButton={false} render={<Link href="/ranking" />}
             >
-              4商品すべての比較を見る
+              {publishedProducts.length}商品すべての比較を見る
               <ArrowRight data-icon="inline-end" aria-hidden="true" />
             </Button>
           </div>
