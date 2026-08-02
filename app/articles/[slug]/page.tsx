@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Clock, Info, RefreshCw } from 'lucide-react'
 import { ArticleCard } from '@/components/article-card'
+import { HairPatternDiagram } from '@/components/hair-pattern-diagram'
 import { ProductInlineCard } from '@/components/product-inline-card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -190,6 +191,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               if (!product || !product.published) return null
               return <ProductInlineCard key={index} product={product} />
             }
+            case 'hairPatternDiagram':
+              return <HairPatternDiagram key={index} />
             default:
               return null
           }
