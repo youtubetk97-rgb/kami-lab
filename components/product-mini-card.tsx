@@ -26,13 +26,13 @@ export function ProductMiniCard({ product }: { product: Product }) {
         {product.rank}位
       </span>
 
-      <div className="relative mt-2 aspect-[4/3] w-full overflow-hidden rounded-lg bg-muted">
+      <div className="relative mt-2 aspect-[4/3] w-full overflow-hidden rounded-lg bg-white ring-1 ring-border">
         <Image
           src={product.image || '/placeholder.svg'}
           alt={`${product.brand} ${product.name}の商品画像`}
           fill
           sizes="(max-width: 640px) 100vw, 320px"
-          className="object-cover"
+          className="object-contain p-3"
         />
       </div>
 

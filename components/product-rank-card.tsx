@@ -36,13 +36,13 @@ export function ProductRankCard({ product }: { product: Product }) {
 
       <div className="flex flex-col gap-5 p-4">
         <div className="flex flex-col gap-4 sm:flex-row">
-          <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-lg bg-muted sm:w-40">
+          <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-border sm:w-40">
             <Image
               src={product.image || '/placeholder.svg'}
               alt={`${product.brand} ${product.name}の商品画像`}
               fill
               sizes="(max-width: 640px) 100vw, 160px"
-              className="object-cover"
+              className="object-contain p-2"
             />
           </div>
 

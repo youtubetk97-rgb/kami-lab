@@ -14,13 +14,13 @@ export function ProductInlineCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex gap-4">
-        <div className="relative size-24 shrink-0 overflow-hidden rounded-lg bg-card">
+        <div className="relative size-24 shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-border">
           <Image
             src={product.image || '/placeholder.svg'}
             alt={`${product.brand} ${product.name}の商品画像`}
             fill
             sizes="96px"
-            className="object-cover"
+            className="object-contain p-1"
           />
         </div>
         <div className="flex flex-1 flex-col gap-1.5">

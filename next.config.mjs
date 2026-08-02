@@ -5,6 +5,9 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: '*.a8.net' },
+    ],
   },
   async headers() {
     return [
