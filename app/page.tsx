@@ -114,7 +114,7 @@ export default function HomePage() {
               今から始めませんか。
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
-              薄毛・抜け毛の悩みは世代や性別を問わず、多くの方が抱えている非常にデリケートで深刻な問題です。適切な対処を行うためには、原因を知り、自分に合ったアプローチを選ぶことが大切です。
+              薄毛・抜け毛の悩みは世代や性別を問わず、多くの方が抱えている非常にデリケートで深刻な問題です。適切な対処を行うためには、原因を知り、自分に合ったアプローチを選ぶことが大切です。自力でのケアには限界がある場合も多いため、進行性の場合は専門医に相談するのが最も確実です。
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button
