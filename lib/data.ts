@@ -79,6 +79,11 @@ export const categories: Category[] = [
     name: '女性の薄毛',
     description: '産後・ダイエットから更年期まで、年代別に女性特有の薄毛の原因とケアを解説します。',
   },
+  {
+    slug: 'young-men',
+    name: '20代・30代男性の薄毛',
+    description: 'M字・O字などのパターン診断や、体験談・口コミとの付き合い方など、20代・30代男性に向けた薄毛対策を解説します。',
+  },
 ]
 
 // 2026年8月、公式サイト情報をもとに調査した実データに置き換え済み。
@@ -1073,7 +1078,7 @@ export const articles: Article[] = [
     title: '20代・30代男性の薄毛パターン｜M字・O字・U字型の特徴とセルフチェック',
     excerpt:
       '男性の薄毛は進行するパターンによっていくつかのタイプに分けられるといわれています。20代・30代で気づきやすい変化の出方と、セルフチェックのポイントを整理しました。',
-    category: 'aga',
+    category: 'young-men',
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 7,
@@ -1128,7 +1133,7 @@ export const articles: Article[] = [
     title: 'ネットのAGA体験談・口コミとの付き合い方【男性向け】',
     excerpt:
       'ビフォーアフター画像、SNSでの「発毛報告」、口コミサイトの星評価。男性がAGA関連の情報を集める際によく目にするコンテンツの見方と、注意したいポイントを整理しました。',
-    category: 'aga',
+    category: 'young-men',
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,

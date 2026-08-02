@@ -6,6 +6,7 @@ import {
   FlaskConical,
   HeartPulse,
   Leaf,
+  Mars,
   ScrollText,
   ShieldCheck,
   Sparkles,
@@ -51,6 +52,7 @@ const categoryIcons = {
   scalp: Sparkles,
   lifestyle: Leaf,
   women: Venus,
+  'young-men': Mars,
 } as const
 
 const categoryColors = {
@@ -59,6 +61,7 @@ const categoryColors = {
   scalp: 'bg-teal-500',
   lifestyle: 'bg-amber-500',
   women: 'bg-rose-500',
+  'young-men': 'bg-indigo-500',
 } as const
 
 const steps = [
