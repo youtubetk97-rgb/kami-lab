@@ -18,12 +18,6 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
-      <div className="bg-primary text-primary-foreground">
-        <p className="mx-auto max-w-6xl px-4 py-1.5 text-center text-[11px] leading-relaxed">
-          本サイトはアフィリエイト広告を利用しています
-        </p>
-      </div>
-
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
