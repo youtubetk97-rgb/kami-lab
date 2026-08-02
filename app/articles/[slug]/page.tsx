@@ -46,8 +46,28 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const related = getRelatedArticles(article.slug)
   const headings = article.body.filter((block) => block.type === 'h2')
 
+  const baseUrl = 'https://www.hatsu-labo.com'
+  const absoluteImage = article.image.startsWith('http') ? article.image : `${baseUrl}${article.image}`
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    image: [absoluteImage],
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    author: { '@type': 'Organization', name: 'ハツラボ', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'ハツラボ', url: baseUrl },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${baseUrl}/articles/${article.slug}` },
+  }
+
   return (
     <article className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 lg:py-12">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <nav aria-label="パンくずリスト" className="mb-6 text-xs text-muted-foreground">
         <ol className="flex flex-wrap items-center gap-1.5">
           <li>

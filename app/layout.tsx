@@ -54,6 +54,15 @@ export const viewport: Viewport = {
   ],
 }
 
+const siteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ハツラボ',
+  url: 'https://www.hatsu-labo.com',
+  description: '薄毛・抜け毛に悩む方へ。AGA治療、育毛剤、スカルプケアの最新情報と人気商品の比較ランキングを、根拠のある情報だけで分かりやすく解説します。',
+  inLanguage: 'ja',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,6 +71,11 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`bg-background ${notoSansJp.variable} ${zenKaku.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
