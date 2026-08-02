@@ -9,7 +9,6 @@ import { categories } from '@/lib/data'
 
 const navLinks = [
   { href: '/', label: 'ホーム' },
-  { href: '/ranking', label: '比較ランキング' },
   { href: '/articles', label: '記事一覧' },
 ]
 
