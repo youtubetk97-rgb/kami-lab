@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Clock, Info, RefreshCw } from 'lucide-react'
+import { AgaTreatmentTimelineDiagram } from '@/components/aga-treatment-timeline-diagram'
 import { ArticleCard } from '@/components/article-card'
+import { HairCycleDiagram } from '@/components/hair-cycle-diagram'
 import { HairPatternDiagram } from '@/components/hair-pattern-diagram'
 import { ProductInlineCard } from '@/components/product-inline-card'
 import { ScalpMassageDiagram } from '@/components/scalp-massage-diagram'
@@ -219,6 +221,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               return <ScalpMassageDiagram key={index} />
             case 'shampooStepsDiagram':
               return <ShampooStepsDiagram key={index} />
+            case 'hairCycleDiagram':
+              return <HairCycleDiagram key={index} />
+            case 'agaTreatmentTimelineDiagram':
+              return <AgaTreatmentTimelineDiagram key={index} />
             default:
               return null
           }
