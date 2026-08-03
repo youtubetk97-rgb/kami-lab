@@ -697,8 +697,8 @@ export const articles: Article[] = [
     publishedAt: '2026-07-10',
     updatedAt: '2026-07-25',
     readingTime: 7,
-    image: '/images/product-serum.png',
-    imageAlt: '白とティールの育毛剤ボトルの商品写真',
+    image: '/images/article-ikumozai-application.jpg',
+    imageAlt: '手のひらにアンバーボトルの液体を垂らしている様子',
     tags: ['育毛剤', '選び方', '成分'],
     body: [
       {
@@ -1226,8 +1226,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 6,
-    image: '/images/product-serum.png',
-    imageAlt: '化粧品ボトルのイメージ写真',
+    image: '/images/article-shampoo-shelf.jpg',
+    imageAlt: '棚に並んだシャンプーとコンディショナーのボトル',
     tags: ['ノンシリコン', 'シャンプー', '選び方'],
     body: [
       {
@@ -1952,8 +1952,8 @@ export const articles: Article[] = [
     publishedAt: '2026-08-02',
     updatedAt: '2026-08-02',
     readingTime: 8,
-    image: '/images/product-serum.png',
-    imageAlt: '化粧品ボトルのイメージ写真',
+    image: '/images/article-ikumozai-classification.jpg',
+    imageAlt: '形の異なる複数のアンバーボトル・チューブ容器が並んでいる様子',
     tags: ['育毛剤', '医薬部外品', '成分'],
     body: [
       {
