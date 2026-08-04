@@ -596,6 +596,41 @@ export const products: Product[] = [
       'https://hb.afl.rakuten.co.jp/ichiba/5641fef2.bdedabe0.5641fef3.1ff4a230/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchap-up%2Fchapup-lotion_1%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
     published: true,
   },
+  {
+    slug: 'bayu-shampoo-set',
+    rank: 16,
+    category: 'shampoo',
+    name: '旅美人 馬油シャンプー・トリートメント・ボディソープ ミニセット',
+    brand: 'アズマ商事',
+    type: '馬油配合シャンプー（トラベル・お試しミニセット）',
+    image: 'https://thumbnail.image.rakuten.co.jp/@0_mall/std-corp/cabinet/s004/10000004_v2.jpg',
+    price: 'シャンプー400mL＋トリートメント240g＋ボディソープ ミニセット',
+    monthlyPrice: '4,158円（税込・送料無料）',
+    score: 3.8,
+    scores: [
+      { label: 'コスパ', value: 3.6 },
+      { label: '使用感', value: 4.0 },
+      { label: '成分の充実度', value: 3.5 },
+      { label: '続けやすさ', value: 3.4 },
+    ],
+    summary:
+      '馬油（ホースオイル）を配合したアズマ商事「旅美人」シリーズのトラベル用ミニセット。シャンプー・トリートメント・ボディソープが一つにまとまっており、馬油ならではのしっとりとした洗い上がりが特徴です。',
+    highlights: ['馬油を配合したしっとりタイプの洗浄処方', 'シャンプー・トリートメント・ボディソープの3点ミニセット', '旅行用・お試しサイズとして使いやすい'],
+    pros: [
+      'トラベルサイズで自宅でも外出先でも試しやすい',
+      '馬油ならではのしっとりとした洗い上がりが期待できる',
+      '3点セットでヘアケアとボディケアをまとめて試せる',
+    ],
+    cons: [
+      '医薬部外品の有効成分は配合されておらず、フケ・かゆみへの効果を積極的に謳う設計ではない',
+      'ミニサイズのため、定番使いというよりお試し用途に向く',
+    ],
+    ingredients: ['馬油（ホースオイル）'],
+    guarantee: '返品・交換条件は販売店（楽天市場）の規定をご確認ください',
+    affiliateUrl:
+      'https://hb.afl.rakuten.co.jp/ichiba/564d91af.51292cea.564d91b0.7c36893f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstd-corp%2F10000004%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
+    published: true,
+  },
 ]
 
 // 公開中の商品だけを対象に、スコア順で表示用の順位(rank)を振り直す。
