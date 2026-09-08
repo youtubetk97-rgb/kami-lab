@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: '記事一覧',
   description:
     'AGA・育毛剤・スカルプケア・生活習慣・女性の薄毛のカテゴリで、薄毛対策の基礎知識と選び方をまとめた記事一覧です。',
+  alternates: {
+    canonical: '/articles',
+  },
 }
 
 export default async function ArticlesPage({

@@ -12,7 +12,7 @@ export function SiteFooter() {
               <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <Sprout className="size-4" aria-hidden="true" />
               </span>
-              <span className="font-heading text-base font-bold">ハツラボ</span>
+              <span className="font-heading text-base font-bold">ヘアケア研究所</span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
               薄毛・抜け毛の悩みに向き合う人のための総合メディアです。公開されている情報をもとに、判断の材料になる形で整理してお届けしています。
@@ -59,7 +59,7 @@ export function SiteFooter() {
             【免責事項】本サイトの内容は一般的な情報提供を目的としたものであり、診断・治療を目的とした医療上の助言ではありません。掲載している商品の効果は個人差があり、特定の結果を保証するものではありません。症状が気になる場合は医療機関にご相談ください。価格や仕様は変更される場合があるため、購入前に販売元の情報をご確認ください。
           </p>
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} ハツラボ All rights reserved.
+            &copy; {new Date().getFullYear()} ヘアケア研究所 All rights reserved.
           </p>
         </div>
       </div>

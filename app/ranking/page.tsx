@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: '育毛・スカルプケア比較ランキング',
   description:
     'コスパ・使いやすさ・成分の充実度・続けやすさの4項目で、育毛剤・トニック・サプリ・スカルプシャンプーを比較しました。気になる点も含めて掲載しています。',
+  alternates: {
+    canonical: '/ranking',
+  },
 }
 
 const criteria = [

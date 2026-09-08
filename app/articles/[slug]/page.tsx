@@ -36,6 +36,9 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/articles/${slug}`,
+    },
   }
 }
 
@@ -58,8 +61,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     image: [absoluteImage],
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
-    author: { '@type': 'Organization', name: 'ハツラボ', url: baseUrl },
-    publisher: { '@type': 'Organization', name: 'ハツラボ', url: baseUrl },
+    author: { '@type': 'Organization', name: 'ヘアケア研究所', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'ヘアケア研究所', url: baseUrl },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${baseUrl}/articles/${article.slug}` },
   }
 

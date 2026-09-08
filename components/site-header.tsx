@@ -23,7 +23,7 @@ export function SiteHeader() {
             <Sprout className="size-4" aria-hidden="true" />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-heading text-base font-bold tracking-tight">ハツラボ</span>
+            <span className="font-heading text-base font-bold tracking-tight">ヘアケア研究所</span>
             <span className="text-[10px] text-muted-foreground">薄毛・抜け毛対策の総合メディア</span>
           </span>
         </Link>

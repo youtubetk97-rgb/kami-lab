@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -22,6 +23,12 @@ import { ArticleCard } from '@/components/article-card'
 import { ProductMiniCard } from '@/components/product-mini-card'
 import { SectionHeading } from '@/components/section-heading'
 import { PRODUCTS_PUBLISHED, articles, categories, faqs, publishedProducts } from '@/lib/data'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
 
 const categoryIcons = {
   aga: Stethoscope,

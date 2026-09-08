@@ -19,13 +19,17 @@ const zenKaku = Zen_Kaku_Gothic_New({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.hatsu-labo.com'),
   title: {
-    default: 'ハツラボ | 薄毛・抜け毛対策の総合メディア',
-    template: '%s | ハツラボ',
+    default: 'ヘアケア研究所 | 薄毛・抜け毛対策の総合メディア',
+    template: '%s | ヘアケア研究所',
   },
   description:
     '薄毛・抜け毛に悩む方へ。AGA治療、育毛剤、スカルプケアの最新情報と人気商品の比較ランキングを、根拠のある情報だけで分かりやすく解説します。',
   keywords: ['薄毛', '育毛剤', 'AGA', 'スカルプケア', '抜け毛対策', '比較ランキング'],
+  alternates: {
+    canonical: '/',
+  },
   generator: 'v0.app',
   icons: {
     icon: [
@@ -57,7 +61,7 @@ export const viewport: Viewport = {
 const siteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'ハツラボ',
+  name: 'ヘアケア研究所',
   url: 'https://www.hatsu-labo.com',
   description: '薄毛・抜け毛に悩む方へ。AGA治療、育毛剤、スカルプケアの最新情報と人気商品の比較ランキングを、根拠のある情報だけで分かりやすく解説します。',
   inLanguage: 'ja',
