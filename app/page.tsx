@@ -5,7 +5,6 @@ import {
   ArrowRight,
   ClipboardCheck,
   FlaskConical,
-  HeartPulse,
   Leaf,
   Mars,
   Sparkles,
@@ -88,9 +87,8 @@ export default function HomePage() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 lg:flex-row lg:items-center lg:gap-12 lg:py-24">
           <div className="flex flex-1 flex-col gap-5">
-            <p className="-mt-6 flex w-fit max-w-full items-center gap-2 whitespace-nowrap rounded-4xl bg-gold px-4 py-3 text-sm font-semibold text-gold-foreground ring-1 ring-white/30 sm:gap-4 sm:px-9 sm:py-5 sm:text-2xl lg:text-3xl">
-              <HeartPulse className="size-5 shrink-0 sm:size-9" aria-hidden="true" />
-              薄毛・抜け毛対策の総合メディア
+            <p className="-mt-6 flex w-fit max-w-full items-center gap-2 whitespace-nowrap rounded-4xl bg-red-600 px-4 py-3 text-sm font-semibold text-white ring-1 ring-white/30 sm:gap-4 sm:px-9 sm:py-5 sm:text-2xl lg:text-3xl">
+              まだ間に合う薄毛・抜け毛対策
             </p>
             <h1 className="font-heading text-3xl leading-tight font-bold text-balance text-white sm:text-4xl lg:text-5xl">
               その抜け毛、
