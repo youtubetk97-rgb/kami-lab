@@ -28,7 +28,10 @@ function RankBadge({ rank }: { rank: number }) {
 
 export function ProductRankCard({ product }: { product: Product }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl bg-card ring-1 ring-foreground/10">
+    <article
+      id={`product-${product.slug}`}
+      className="flex scroll-mt-20 flex-col overflow-hidden rounded-xl bg-card ring-1 ring-foreground/10"
+    >
       <div className="flex items-center justify-between gap-3 border-b border-border bg-muted/60 px-4 py-3">
         <RankBadge rank={product.rank} />
         <span className="text-xs text-muted-foreground">{product.type}</span>

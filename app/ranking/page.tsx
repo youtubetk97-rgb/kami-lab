@@ -170,10 +170,13 @@ export default async function RankingPage({
                     <TableRow key={product.slug}>
                       <TableCell className="font-heading font-bold">{product.rank}位</TableCell>
                       <TableCell className="whitespace-normal">
-                        <span className="flex flex-col">
-                          <span className="font-medium">{product.name}</span>
+                        <a
+                          href={`#product-${product.slug}`}
+                          className="flex flex-col hover:underline"
+                        >
+                          <span className="font-medium text-primary">{product.name}</span>
                           <span className="text-xs text-muted-foreground">{product.type}</span>
-                        </span>
+                        </a>
                       </TableCell>
                       <TableCell>
                         <StarRating score={product.score} />
