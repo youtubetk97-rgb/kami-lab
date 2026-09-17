@@ -150,7 +150,7 @@ export default async function RankingPage({
             </div>
           </section>
 
-          <section className="mx-auto w-full max-w-4xl px-4 pb-10">
+          <section className="mx-auto w-full max-w-6xl px-4 pb-10">
             <SectionHeading
               eyebrow="COMPARISON"
               title={activeCategory ? `${activeCategory.name}を比較する` : '一覧で比較する'}
@@ -169,7 +169,7 @@ export default async function RankingPage({
                   {filteredProducts.map((product) => (
                     <TableRow key={product.slug}>
                       <TableCell className="font-heading font-bold">{product.rank}位</TableCell>
-                      <TableCell>
+                      <TableCell className="whitespace-normal">
                         <span className="flex flex-col">
                           <span className="font-medium">{product.name}</span>
                           <span className="text-xs text-muted-foreground">{product.type}</span>
