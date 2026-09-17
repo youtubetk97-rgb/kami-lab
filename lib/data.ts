@@ -26,12 +26,17 @@ export const productCategories: ProductCategory[] = [
     name: 'AGAクリニック',
     description: '医療機関でのAGA治療プランです。',
   },
+  {
+    slug: 'appliance',
+    name: '美容家電',
+    description: '頭皮・髪への負担を抑える設計をうたうドライヤーなどの美容家電です。',
+  },
 ]
 
 export type Product = {
   slug: string
   rank: number
-  category: 'shampoo' | 'tonic' | 'clinic'
+  category: 'shampoo' | 'tonic' | 'clinic' | 'appliance'
   name: string
   brand: string
   type: string
@@ -629,6 +634,142 @@ export const products: Product[] = [
     guarantee: '返品・交換条件は販売店（楽天市場）の規定をご確認ください',
     affiliateUrl:
       'https://hb.afl.rakuten.co.jp/ichiba/564d91af.51292cea.564d91b0.7c36893f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstd-corp%2F10000004%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D',
+    published: true,
+  },
+  {
+    slug: 'yoika-silky-scalp-shampoo',
+    rank: 17,
+    category: 'shampoo',
+    name: 'YOIKA シルキースカルプ',
+    brand: 'eLife',
+    type: '女性用ナイトリペアスカルプシャンプー',
+    image: 'https://www20.a8.net/svt/bgt?aid=260916609173&wid=001&eno=01&mid=s00000026616002004000&mc=1',
+    price: '通常3,960円（税込・250g/約60日分）、お試し550円（税込・40g）',
+    monthlyPrice: '定期便初回3,564円（税込・15%OFF）',
+    score: 4.3,
+    scores: [
+      { label: 'コスパ', value: 3.9 },
+      { label: '使用感', value: 4.2 },
+      { label: '成分の充実度', value: 4.5 },
+      { label: '続けやすさ', value: 4.5 },
+    ],
+    summary:
+      'eLifeが展開する女性用スカルプシャンプー。ヘマチン＋NMN、5種のヒト型セラミドを含む39種の保湿成分、5種のPPT成分、16種のスカルプケア成分を配合し、頭皮環境とハリ・コシのある髪印象の両方にアプローチする設計です。',
+    highlights: ['ヘマチン＋NMN配合', '5種のヒト型セラミド＋39種の保湿成分', '定期縛りなし・いつでも解約可能'],
+    pros: [
+      '550円のお試しサイズから始められる',
+      '定期縛りがなく、休止・解約の自由度が高い',
+      '保湿・補修系の成分が幅広く配合されている',
+    ],
+    cons: [
+      '通常価格3,960円は、スカルプシャンプーの中では高めの価格帯',
+      '医薬部外品としての有効成分表示は確認できなかったため、購入前に公式サイトの成分表示を確認するとよい',
+    ],
+    ingredients: ['ヘマチン', 'NMN', 'ヒト型セラミド', 'PPT成分', 'スカルプケア成分16種'],
+    guarantee: '定期便は回数縛りなし。解約条件の詳細は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4BCCJL+2V00FM+5PDC+BX3J6',
+    published: true,
+  },
+  {
+    slug: 'luty-emme-shampoo',
+    rank: 18,
+    category: 'shampoo',
+    name: 'LUTY emme シャンプー',
+    brand: 'LUTY',
+    type: 'アミノ酸系スカルプシャンプー',
+    image: 'https://www27.a8.net/svt/bgt?aid=260916609182&wid=001&eno=01&mid=s00000016301015008000&mc=1',
+    price: '通常4,400円（税込・500mL）',
+    monthlyPrice: '定期3,520円（税込）〜',
+    score: 4.1,
+    scores: [
+      { label: 'コスパ', value: 3.8 },
+      { label: '使用感', value: 4.3 },
+      { label: '成分の充実度', value: 4.4 },
+      { label: '続けやすさ', value: 4.0 },
+    ],
+    summary:
+      '100％アミノ酸系洗浄成分をベースに、もっちりとした濃密泡で地肌の汚れをオフするスカルプシャンプー。「洗う時間を、ケアの時間へ」というコンセプトのもと、泡立てて3分置く泡パック設計で補修・保湿成分をなじませます。ハイダメージ毛向けのモイストと、軽やかな仕上がりのスムースの2タイプから選べます。',
+    highlights: ['泡パックで3分ケアできる設計', 'フラーレン・アスタキサンチンなど抗酸化成分配合', 'モイスト／スムースの2タイプ展開'],
+    pros: [
+      '3分の泡パックで補修・保湿成分をなじませる設計',
+      'フラーレン・アスタキサンチン・プロポリスエキスなど抗酸化成分を複数配合',
+      '髪質に合わせてモイスト・スムースの2タイプから選べる',
+    ],
+    cons: [
+      '500mLで4,400円とスカルプシャンプーの中では高めの価格帯',
+      '医薬部外品としての有効成分表示は確認できなかったため、購入前に公式サイトの成分表示を確認するとよい',
+    ],
+    ingredients: ['フラーレン', 'アスタキサンチン', 'プロポリスエキス', 'アミノ酸系CMC', 'ゴールデンホホバオイル'],
+    guarantee: '定期コースの解約条件は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4BCCJL+30CWVM+3HS2+2HCQGX',
+    published: true,
+  },
+  {
+    slug: '87saku-hanasaku-dryer',
+    rank: 19,
+    category: 'appliance',
+    name: '87saku ハナサク ヘアドライヤー',
+    brand: '87saku',
+    type: '大風量・軽量ヘアドライヤー',
+    image: 'https://www27.a8.net/svt/bgt?aid=260916609150&wid=001&eno=01&mid=s00000027666001004000&mc=1',
+    price: '送料無料・本体約343g',
+    monthlyPrice: '24,900円（税込）',
+    score: 4.1,
+    scores: [
+      { label: 'コスパ', value: 3.7 },
+      { label: '軽さ・持ちやすさ', value: 4.8 },
+      { label: '風量・速乾性', value: 4.6 },
+      { label: '携帯性', value: 4.3 },
+    ],
+    summary:
+      '本体約343g（電源コード除く）という軽量ボディに、約2.2㎥/分の大風量を備えたヘアドライヤー。温度をCOOL・60℃・80℃・95℃の4段階で切り替えられ、スイッチの長押しで地肌にやさしい風に調整できます。折りたたみ式で収納袋も付属し、持ち運びやすい設計です。',
+    highlights: ['本体約343gの軽量ボディ', '約2.2㎥/分の大風量', '温度4段階切替・折りたたみ収納可'],
+    pros: [
+      '約343gと軽く、乾かす際の腕の負担を抑えやすい',
+      '大風量で乾燥時間を短縮しやすい',
+      '温度を4段階から選べ、地肌にやさしいモードも用意されている',
+    ],
+    cons: [
+      '24,900円とヘアドライヤーの中では高価格帯',
+      '主に公式サイト中心の販売のため、購入前に実機を試せる店舗は限られる場合がある',
+    ],
+    ingredients: ['大風量2.2㎥/分', '温度4段階切替（COOL／60℃／80℃／95℃）', '折りたたみ式・収納袋付き'],
+    guarantee: '保証内容の詳細は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4BCCJL+2HB1IQ+5XH0+5Z6WX',
+    published: true,
+  },
+  {
+    slug: 'haru-kurokami-scalp',
+    rank: 20,
+    category: 'shampoo',
+    name: 'haru kurokamiスカルプ',
+    brand: 'haru',
+    type: '100％天然由来・10種類無添加シャンプー',
+    image: 'https://d2w53g1q050m78.cloudfront.net/wwwharushopjp/uploads/assets/images/products/10390101/01.png',
+    price: '通常4,290円（税込・400mL/約2ヶ月分）',
+    monthlyPrice: '定期3,432円（税込・20%OFF）〜',
+    score: 4.3,
+    scores: [
+      { label: 'コスパ', value: 4.0 },
+      { label: '使用感', value: 4.3 },
+      { label: '成分の充実度', value: 4.6 },
+      { label: '続けやすさ', value: 4.4 },
+    ],
+    summary:
+      '100％天然由来・10種類無添加処方のスカルプシャンプー。ソープナッツエキスとヤシ由来の洗浄成分で頭皮クレンジングを行いながら、キャピキシルやホップエキスでハリ・コシケアにアプローチします。リンス不要の設計で、1本でケアを完結できる点も特徴です。',
+    highlights: ['リンス不要の多機能設計', 'キャピキシル・ホップエキス配合', '定期コースは通常価格から20%OFF'],
+    pros: [
+      'リンス不要で1本でケアが完結する',
+      'キャピキシル・ホップエキスなどハリ・コシケア成分を配合',
+      '400mLで約2ヶ月分と使い切りやすい容量',
+    ],
+    cons: [
+      '通常価格4,290円は、スカルプシャンプーの中では高めの価格帯',
+      '香りや洗い上がりの好みは分かれやすく、合う・合わないの個人差がある',
+    ],
+    ingredients: ['ソープナッツエキス', 'キャピキシル', 'ホップエキス', 'ヘマチン', '加水分解シルク'],
+    guarantee: '定期コースの返金保証の有無・条件は公式サイトでご確認ください',
+    affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=4BCCJL+1X2AYA+33NQ+63H8I',
     published: true,
   },
 ]
