@@ -8,6 +8,7 @@ import { ArticleCard } from '@/components/article-card'
 import { HairCycleDiagram } from '@/components/hair-cycle-diagram'
 import { HairPatternDiagram } from '@/components/hair-pattern-diagram'
 import { ProductInlineCard } from '@/components/product-inline-card'
+import { RichText } from '@/components/rich-text'
 import { ScalpMassageDiagram } from '@/components/scalp-massage-diagram'
 import { ShampooStepsDiagram } from '@/components/shampoo-steps-diagram'
 import { Badge } from '@/components/ui/badge'
@@ -162,7 +163,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   key={index}
                   className="mb-6 border-l-4 border-primary pl-4 text-base leading-relaxed font-medium text-pretty"
                 >
-                  {block.text}
+                  <RichText text={block.text} />
                 </p>
               )
             case 'h2':
@@ -183,7 +184,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             case 'p':
               return (
                 <p key={index} className="mb-4 text-sm leading-relaxed sm:text-base">
-                  {block.text}
+                  <RichText text={block.text} />
                 </p>
               )
             case 'list':
@@ -195,7 +196,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         className="mt-2 size-1.5 shrink-0 rounded-full bg-primary"
                         aria-hidden="true"
                       />
-                      <span>{item}</span>
+                      <span>
+                        <RichText text={item} />
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -209,7 +212,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <Info className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
                   <div className="flex flex-col gap-1">
                     <p className="font-heading text-sm font-bold">{block.title}</p>
-                    <p className="text-sm leading-relaxed">{block.text}</p>
+                    <p className="text-sm leading-relaxed">
+                      <RichText text={block.text} />
+                    </p>
                   </div>
                 </div>
               )
